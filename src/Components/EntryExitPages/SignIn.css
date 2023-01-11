@@ -1,0 +1,113 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login{
+    margin: auto auto;
+    margin-top: 70px;
+    height: 473px;
+    width: 464px;
+    background-color:#FFFFFF;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+ .extra-info {
+     text-align: center;
+ }
+ #link{
+    margin-left: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    /* background-color: aqua; */
+ }
+#logo-signup{
+    margin-top: 0px;
+    width: 100px;
+        height: 100px;
+        border-radius: 58%;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 58%;
+}
+.login-items{
+    padding-left: 20px;
+    margin-top: 30px;
+    height: 35px;
+    background-color: #FFFFFF;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.error{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: red;
+}
+#signup{
+    color: #4C57B6;
+    text-decoration: none;
+    font-weight: bold;
+}
+#signin,#signup-btn{
+    background-color:#4C57B6;
+    width: 395px;
+    color: white;
+}
+#credential-signin{
+    /* margin-top:0; */
+    color: #000000;
+    font-size: small;
+}
+.extra-info,#extra-login{
+    margin-top: 30px;
+}
+.signup-items1{
+    padding-left: 20px;
+
+    margin-top: 10px;
+        height: 35px;
+        background-color: #FFFFFF;
+        width: 350px;
+        border-radius: 5px;
+}
+.signup-items{
+    padding-left: 20px;
+    margin-top: 10px;
+        height: 35px;
+        background-color: #FFFFFF;
+        width: 350px;
+        border-radius: 5px;
+}
+#signup-btn{
+    width: 390px;
+}
+.confirmSignin{
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 360px) {
+    .login {
+        width: 300px;
+    }
+   .extra-info{
+    margin: auto auto;
+   }
+}
