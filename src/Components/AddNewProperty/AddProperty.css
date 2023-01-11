@@ -1,0 +1,155 @@
+.card {
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 80%;
+    height: 700px;
+    box-shadow: 10px 14px 70px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    border-radius: 20px;
+    text-align: left;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.formSection {
+    display: grid;
+    gap: 50px 30px;
+    grid-template-columns: auto auto;
+    padding: 60px 60px;
+}
+
+
+.formInput input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #C3C3C3;
+    border-radius: 8px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #7D7D7D;
+}
+
+.formInput label {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #7D7D7D;
+}
+
+.formInput button {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 500px;
+    padding: 10px 30px;
+}
+
+.cancelBtn {
+    border: none;
+    float: right;
+    background: #6AB4F8;
+}
+
+.saveBtn {
+    border: none;
+    background: #4C57B6;
+}
+
+.eclipseCamera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #7D7D7D;
+    cursor: pointer;
+}
+
+input[type='file']{
+display: none;
+}
+
+.eclipseCamera span{
+    margin-left: 20px;
+}
+
+#camera {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: #6AB4F8;
+    border-radius: 50%;
+    color: black;
+}
+
+
+#bars {
+    margin-left: 10%;
+    margin-top: 3%;
+    width: 80%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aquamarine;
+    border-radius: 50px;
+    box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.15);
+}
+#basic_info, #property_detail, #general_info, #location_info{
+    width: 15%;
+    padding: 18px;
+    gap: 15px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.active {
+    width: 10%;
+    background: #6AB4F8;
+    box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 500px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.numActive{
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    color: black;
+}
+.noNumActive{
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: black;
+}
+
+
