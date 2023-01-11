@@ -10,6 +10,7 @@ const Logout = () => {
     localStorage.clear();
     navigate("/");
   };
+  // hi
   return (
     <>
       <button id="logoutBtn" onClick={handleLogout}>
