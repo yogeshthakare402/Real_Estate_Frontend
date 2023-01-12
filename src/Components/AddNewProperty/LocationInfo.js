@@ -32,7 +32,9 @@ export default function LocationInfo({ nextStep, HandleFormData, prevStep, value
         let token = localStorage.getItem("token");
         let id = localStorage.getItem("userid");
 
-        axios.post("http://localhost:8000/api/users/property", formData, {
+        let url = "https://real-estate-app-zedu.onrender.com/api/users/property"
+        // let urllocal = "http://localhost:8000/api/users/property"
+        axios.post(url, formData, {
             headers: {
                 'token': token,
                 'id': id,

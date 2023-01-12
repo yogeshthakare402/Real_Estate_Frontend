@@ -60,7 +60,10 @@ function PropertyListingPage() {
     useEffect(() => {
         // getAllListedPropeties();
         // console.log(propertyList);
-        fetch("http://localhost:8000/api/users/property", {
+        let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
+        // let urlLocal = "http://localhost:8000/api/users/property";
+
+        fetch(url, {
             method: 'GET',
             headers: {
                 'token': token,
@@ -118,7 +121,7 @@ function PropertyListingPage() {
                     <Link to={"/form"}>+ Add Property</Link>
                 </button>
             </div>
-            
+
             <table className='property-table'>
                 <thead>
                     <tr className='tableHeader'>
@@ -137,12 +140,35 @@ function PropertyListingPage() {
                     {showProperty ?
                         (propertyList.property && currentData.map((data, index) => {
                             return <tr className='tableData' key={index} >
+                                <td>{data.ppdId}</td>
+                                <td >
+                                    <BsImages onClick={() => popupData(data.ppdId)} />
+                                </td>
+                                <td>{data.property}</td>
+                                <td>{data.mobile}</td>
+                                <td>{data.area}</td>
+                                <td>{data.views}</td>
+                                <td><button onClick={(e) => changeStatus(e)} className='unSoldbtn'>Unsold</button></td>
+                                <td>{data.daysLeft}</td>
+                                <td className='edit'>
+                                    {/* <TbEye className="iconsEdit" /> */}
+                                    <TbEdit className="iconsEdit" />
+                                </td>
+                            </tr>
+
+                        }))
+                        :
+                        (propertyList.property && propertyList.property.map((data, index) => {
+                            return data.ppdId === PPDID ? (
+                                // setShowProperty(false)
+                                // console.log(data.ppdId)
+                                <tr className='tableData' key={index}>
                                     <td>{data.ppdId}</td>
-                                    <td >
+                                    <td>
                                         <BsImages onClick={() => popupData(data.ppdId)} />
                                     </td>
                                     <td>{data.property}</td>
-                                    <td>{data.mobile}</td>
+                                    <td>{data.contact}</td>
                                     <td>{data.area}</td>
                                     <td>{data.views}</td>
                                     <td><button onClick={(e) => changeStatus(e)} className='unSoldbtn'>Unsold</button></td>
@@ -152,35 +178,12 @@ function PropertyListingPage() {
                                         <TbEdit className="iconsEdit" />
                                     </td>
                                 </tr>
-                           
-                        }))
-                        :
-                        (propertyList.property && propertyList.property.map((data, index) => {
-                            return data.ppdId === PPDID ? (
-                                // setShowProperty(false)
-                                // console.log(data.ppdId)
-                                    <tr className='tableData' key={index}>
-                                        <td>{data.ppdId}</td>
-                                        <td>
-                                            <BsImages onClick={() => popupData(data.ppdId)} />
-                                        </td>
-                                        <td>{data.property}</td>
-                                        <td>{data.contact}</td>
-                                        <td>{data.area}</td>
-                                        <td>{data.views}</td>
-                                        <td><button onClick={(e) => changeStatus(e)} className='unSoldbtn'>Unsold</button></td>
-                                        <td>{data.daysLeft}</td>
-                                        <td className='edit'>
-                                            {/* <TbEye className="iconsEdit" /> */}
-                                            <TbEdit className="iconsEdit" />
-                                        </td>
-                                    </tr>
-                                ) : ''
+                            ) : ''
                         }))
                     }
                 </tbody>
             </table>
-            
+
             {showPopUp && <PropertyData showData={showData} setShowPopUp={setShowPopUp} />}
             <Pagination paginate={paginate} dataLength={propertyList.property.length} dataPerPage={dataPerPage} />
         </CommonPage>
