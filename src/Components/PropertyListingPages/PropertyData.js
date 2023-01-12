@@ -7,7 +7,9 @@ function PropertyData({ showData, setShowPopUp }) {
   const returnBack = () => {
     setShowPopUp(false)
   }
-
+  // to get photos
+  let url = "https://real-estate-app-zedu.onrender.com/";
+  // let urlLocal = "http://localhost:8000/";
 
   return (
     <div id='data'>
@@ -21,7 +23,7 @@ function PropertyData({ showData, setShowPopUp }) {
       <div className='dataContainer'>
         <div className='images'>
           {showData.image.map((image, i) => {
-            return <img src={"http://localhost:8000/" + image.path} alt={image.originalname} key={i} className='fetchedimg' />
+            return <img src={url + image.path} alt={image.originalname} key={i} className='fetchedimg' />
           })}
         </div>
         <hr />

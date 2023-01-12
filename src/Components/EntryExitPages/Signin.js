@@ -15,7 +15,10 @@ function Signin() {
         e.preventDefault(e);
         const { userid, password } = details;
 
-        axios.post("http://localhost:8000/api/users/login", {
+        let url = "https://real-estate-app-zedu.onrender.com/api/users/login";
+        // let urlLocal = "http://localhost:8000/api/users/login"
+
+        axios.post(url, {
             email: userid,
             password: password,
         }).then((res) => {
