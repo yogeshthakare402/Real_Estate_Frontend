@@ -24,7 +24,7 @@ function Signup() {
     let userName = sigupDetails.email.split("@")[0];
 
     let url = "https://real-estate-app-zedu.onrender.com/api/users/signup";
-    // let urlLocal = "http://localhost:8000/api/users/signup";
+    // let url = "http://localhost:8000/api/users/signup";
 
     axios.post(url, {
       username: userName,
