@@ -23,8 +23,12 @@ function Signup() {
   async function onSubmit(data) {
     let userName = sigupDetails.email.split("@")[0];
 
-    let url = "https://real-estate-app-zedu.onrender.com/api/users/signup";
+    //for render.com
+    // let url = "https://real-estate-app-zedu.onrender.com/api/users/signup";
+    // for local
     // let url = "http://localhost:8000/api/users/signup";
+    // for vercel
+    let url = "https://real-estate-backend-kohl.vercel.app/api/users/signup";
 
     axios.post(url, {
       username: userName,
@@ -32,7 +36,7 @@ function Signup() {
       password: sigupDetails.password,
     })
       .then((res) => navigate("/"))
-      .catch((err) => alert("Email already Exists"));
+      .catch((err) => console.log(err));
   }
 
 

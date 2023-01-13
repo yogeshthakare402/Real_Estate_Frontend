@@ -15,8 +15,12 @@ function Signin() {
         e.preventDefault(e);
         const { userid, password } = details;
 
-        let url = "https://real-estate-app-zedu.onrender.com/api/users/login";
+        //for render.com
+        // let url = "https://real-estate-app-zedu.onrender.com/api/users/login";
+        //for local
         // let url = "http://localhost:8000/api/users/login"
+        //for vercel
+        let url = "https://real-estate-backend-kohl.vercel.app/api/users/login"
 
         axios.post(url, {
             email: userid,
@@ -27,7 +31,7 @@ function Signin() {
                 localStorage.setItem("userid", res.data.details.userid);
                 localStorage.setItem("name", res.data.details.email);
                 navigate("/propertyListingPage",{state:{token:res.data.token,id:res.data.details.userid}});
-            }).catch((err) => alert("Enter valid crendentials"));
+            }).catch((err) => console.log(err));
     }
 
 

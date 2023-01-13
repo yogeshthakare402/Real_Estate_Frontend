@@ -27,13 +27,18 @@ export default function LocationInfo({ nextStep, HandleFormData, prevStep, value
         for (let key of formData.entries()) {
             console.log(key)
         }
-        
+
 
         let token = localStorage.getItem("token");
         let id = localStorage.getItem("userid");
 
-        let url = "https://real-estate-app-zedu.onrender.com/api/users/property"
-        // let urllocal = "http://localhost:8000/api/users/property"
+        //for render.com
+        // let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
+        //for local
+        // let url = "http://localhost:8000/api/users/property";
+        //for vercel
+        let url = "https://real-estate-backend-kohl.vercel.app/api/users/property";
+
         axios.post(url, formData, {
             headers: {
                 'token': token,
