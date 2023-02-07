@@ -33,11 +33,11 @@ export default function LocationInfo({ nextStep, HandleFormData, prevStep, value
         let id = localStorage.getItem("userid");
 
         //for render.com
-        // let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
+        let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
         //for local
         // let url = "http://localhost:8000/api/users/property";
         //for vercel
-        let url = "https://real-estate-backend-kohl.vercel.app/api/users/property";
+        // let url = "https://real-estate-backend-kohl.vercel.app/api/users/property";
 
         axios.post(url, formData, {
             headers: {
