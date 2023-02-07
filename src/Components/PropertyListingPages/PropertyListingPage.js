@@ -21,7 +21,16 @@ function PropertyListingPage() {
 
     const changeStatus = (e) => {
         // console.log(e)
-        e.target.innerHTML === "Unsold" ? e.target.innerHTML = "Sold" : e.target.innerHTML = "Unsold";
+        if(e.target.innerHTML === "Unsold"){
+            e.target.innerHTML = "Sold";
+            e.target.parentElement.nextSibling.innerHTML = 0
+            // console.log(e.target.parentElement.nextSibling.innerHTML)
+            // propertyList.property.filter((data) => {
+            //     return data.ppdId === PPDID ? propertyList.property.daysLeft=== 0 : ''
+            // })
+        }else{
+            e.target.innerHTML = "Unsold"
+        }
     }
 
     const getPropertyDetails = (e) => {
@@ -62,11 +71,11 @@ function PropertyListingPage() {
         // console.log(propertyList);
 
         //for render.com
-        // let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
+        let url = "https://real-estate-app-zedu.onrender.com/api/users/property";
         //for local
         // let url = "http://localhost:8000/api/users/property";
         //for vercel
-        let url = "https://real-estate-backend-kohl.vercel.app/api/users/property"
+        // let url = "https://real-estate-backend-kohl.vercel.app/api/users/property"
 
         fetch(url, {
             method: 'GET',
