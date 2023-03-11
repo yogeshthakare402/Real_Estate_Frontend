@@ -2,8 +2,6 @@ import React from 'react';
 import './Common.css'
 import { TbEye, TbBell, TbArrowBarUp, TbArrowBarToDown, TbTag, TbUser } from "react-icons/tb";
 import { AiFillCaretDown, AiOutlineHome } from "react-icons/ai";
-// import { useNavigate } from "react-router-dom";
-// import axios from "axios";
 import { useState } from 'react';
 import Logout from './EntryExitPages/Logout';
 
@@ -24,28 +22,28 @@ function CommonPage({ children }) {
                 <div><img className='logo' src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/88975523945059.5632b7d5654ae.png' alt='Logo' /></div>
 
                 <div className='menuBar'>
-                    <div className='menu'>
-                        <div className='open'><AiOutlineHome className="icons" /></div>
-                        <div className='open'>Property</div>
+                    <div className='menu' id='open'>
+                        <AiOutlineHome className="icons" />
+                        <div>Property</div>
                     </div>
                     <div className='menu'>
-                        <div><TbBell className="icons" /></div>
+                        <TbBell className="icons" />
                         <div>Assistance</div>
                     </div>
                     <div className='menu'>
-                        <div><TbArrowBarToDown className="icons" /></div>
+                        <TbArrowBarToDown className="icons" />
                         <div>Received Interest</div>
                     </div>
                     <div className='menu'>
-                        <div><TbArrowBarUp className="icons" /></div>
+                        <TbArrowBarUp className="icons" />
                         <div> Send Interest</div>
                     </div>
                     <div className='menu'>
-                        <div><TbEye className="icons" /></div>
+                       <TbEye className="icons" />
                         <div> Property Views</div>
                     </div>
                     <div className='menu'>
-                        <div><TbTag className="icons" /></div>
+                        <TbTag className="icons" />
                         <div>Tariff Plan</div>
                     </div>
                 </div>
@@ -56,7 +54,7 @@ function CommonPage({ children }) {
 
                     <div>
                         <TbUser className="iconsUsers" />
-                        {user.name}
+                        <span id='username'>{user.name}</span>
                         <AiFillCaretDown
                             className="drop_down"
                             onClick={() => {
