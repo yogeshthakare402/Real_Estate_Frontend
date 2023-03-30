@@ -1,4 +1,4 @@
-.operations{
+.operations {
     position: sticky;
     top: 0px;
     /* background:white; */
@@ -10,19 +10,20 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    
+
 }
-#searchForm{
+
+#searchForm {
     width: 250px;
     height: 50px;
     border: none;
     border-radius: 50px 50px;
-    box-shadow:0px 0px 5px 2px rgb(171, 171, 174);
+    box-shadow: 0px 0px 5px 2px rgb(171, 171, 174);
     text-align: center;
 }
 
 
-.searchinput{
+.searchinput {
     height: 50px;
     border: none;
     text-align: center;
@@ -30,7 +31,7 @@
     border-right: 2px solid rgb(167, 162, 162);
 }
 
-.searchbtn{
+.searchbtn {
     height: 50px;
     background-color: rgb(255, 255, 255);
     border: none;
@@ -39,24 +40,25 @@
     border-radius: 0 50px 50px 0;
 }
 
-.searchinput:focus{
+.searchinput:focus {
     outline: none;
-  box-shadow: none;
-  text-align: center;
+    box-shadow: none;
+    text-align: center;
 }
-.addPropertybtn{
+
+.addPropertybtn {
     width: 250px;
     height: 50px;
     font-size: x-large;
     text-decoration: none;
     border: none;
     border-radius: 50px 50px;
-    box-shadow:0px 0px 5px 2px rgb(157, 157, 163);
+    box-shadow: 0px 0px 5px 2px rgb(157, 157, 163);
     text-align: center;
     background-color: rgb(0, 255, 242);
 }
 
-#property-table{
+#property-table {
     margin-top: 20px;
     overflow-x: auto;
     margin-left: 10px;
@@ -65,12 +67,12 @@
     box-shadow: 0px 0px 5px 5px rgb(195, 195, 199);
 }
 
-#property-table table{
+#property-table table {
     width: 100%;
     overflow-y: scroll;
 }
 
-.tableHeader{
+.tableHeader {
     position: sticky;
     top: 0px;
     height: 50px;
@@ -78,30 +80,33 @@
     box-shadow: 5px 0px 0px 5px ghostwhite;
 }
 
-.tableData{
+.tableData {
     height: 50px;
     box-shadow: 5px 0px 0px 5px ghostwhite;
 }
 
-.noList{
+.noList {
     padding-top: 100px;
 }
-.imagetag{
+
+.imagetag {
     width: 50px;
 }
 
-.edit{
+.edit {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     align-self: flex-end;
     justify-content: center;
 }
-.iconsEdit{
+
+.iconsEdit {
     margin-right: 10px;
     /* width: 20px; */
 }
-.unSoldbtn{
+
+.unSoldbtn {
     border: none;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
@@ -109,13 +114,14 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .unSoldbtn:hover {
     background-color: aqua;
     color: black;
 }
 
 /* Property Data CSS */
-#data{
+#data {
     width: 80%;
     height: 750px;
     box-shadow: 0px 0px 10px 10px gray;
@@ -129,26 +135,30 @@
     overflow-y: scroll;
 }
 
-#heading{
+#heading {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-#stickyHead{
+
+#stickyHead {
     position: sticky;
     top: 0px;
     background-color: aqua;
 }
-hr{
+
+hr {
     margin-top: 0px;
 }
-h2{
+
+h2 {
     margin-left: 20px;
     align-self: center;
 }
-#dataCancle{
+
+#dataCancle {
     padding-top: 30px;
     /* padding-bottom: ; */
     margin-bottom: 0;
@@ -161,27 +171,28 @@ h2{
     /* border-radius: 0px 40px 0px 0px; */
 }
 
-.dataContainer{
+.dataContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-h3{
+
+h3 {
     padding: 20px 40px;
     background-color: aqua;
     border: 3px solid rgb(0, 255, 162);
     border-radius: 50px;
 }
 
-.infoPage{
+.infoPage {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.infoContainer{
+.infoContainer {
     margin-left: 100px;
     width: 90%;
     height: fit-content;
@@ -193,7 +204,8 @@ h3{
     padding: 20px 20px;
     /* list-style: disc; */
 }
-.data{
+
+.data {
     margin-left: 100px;
     width: 40%;
     height: 50px;
@@ -204,27 +216,31 @@ h3{
     list-style: disc;
 }
 
-label{
+label {
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.data span{
+
+.data span {
     font-size: larger;
     font-weight: 500;
 }
-#address,#landmark,#description{
+
+#address,
+#landmark,
+#description {
     height: 120px;
 }
 
-.images{
+.images {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.fetchedimg{
+.fetchedimg {
     width: 300px;
     height: 300px;
 }
@@ -232,12 +248,12 @@ label{
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
-  }
-  
+}
 
-  /* Pagination */
 
-  #page{
+/* Pagination */
+
+#page {
     margin-top: 30px;
     width: 100%;
     display: flex;
@@ -248,55 +264,60 @@ label{
     position: absolute;
     top: 90%;
     left: 50%;
-  }
+}
 
-  .pageNum{
+.pageNum {
     padding: 5px 10px 5px 10px;
     border: 3px solid rgb(10, 240, 240);
     font-size: larger;
-  }
+}
 
-  #prev, #next{
+#prev,
+#next {
     border: 2px solid black;
     padding: 0.5rem 0.7rem;
     border-radius: 0.4rem;
     background-color: aquamarine;
     font-weight: bold;
     cursor: pointer;
-  }
-  #prev:hover{
-    background-color: aqua;
-    color: black;
-  }
-  #next:hover{
-    background-color: aqua;
-    color: black;
-  }
+}
 
-  @media screen and (min-width:200px) and (max-width:800px) {
-    /* .searchbtn{
-        
-    } */
-    .addPropertybtn{
+#prev:hover {
+    background-color: aqua;
+    color: black;
+}
+
+#next:hover {
+    background-color: aqua;
+    color: black;
+}
+
+@media screen and (min-width:200px) and (max-width:800px) {
+
+    .addPropertybtn {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    #searchForm{
+
+    #searchForm {
         margin-top: 10px;
     }
-    #property-table{
+
+    #property-table {
         margin-top: 50px;
     }
-    .infoPage{
+
+    .infoPage {
         display: flex;
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
     }
-    .infoContainer{
+
+    .infoContainer {
         margin-left: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-  }
+}
